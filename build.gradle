@@ -1,16 +1,9 @@
 plugins {
-    id 'com.gradle.build-scan' version '1.13.1'
     id 'java'
-    id 'org.springframework.boot' version '2.0.1.RELEASE'
+    id 'org.springframework.boot' version '2.7.16'
 }
 
-buildScan {
-    licenseAgreementUrl = 'https://gradle.com/terms-of-service'
-    licenseAgree = 'yes'
-    publishAlways()
-}
-
-sourceCompatibility = 1.8
+sourceCompatibility = 17
 group = 'com.github.gregwhitaker'
 version = '0.1.0'
 
@@ -20,10 +13,10 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE'
-    compile 'com.graphql-java:graphql-spring-boot-starter:4.0.0'
-    compile 'com.graphql-java:graphiql-spring-boot-starter:4.0.0'
-    compile 'com.graphql-java:graphql-java-tools:4.3.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.16'
+    implementation 'com.graphql-java:graphql-spring-boot-starter:4.0.0'
+    implementation 'com.graphql-java:graphiql-spring-boot-starter:4.0.0'
+    implementation 'com.graphql-java:graphql-java-tools:4.3.0'
 
-    testCompile 'org.springframework.boot:spring-boot-starter-test:2.0.1.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.16'
 }
